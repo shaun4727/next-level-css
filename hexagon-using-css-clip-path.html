@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Clip Path</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            /**
+                border box - 
+                content area of the element = width-padding*2-border*2
+
+                if width is 100, padding:20, border: 5
+
+                content area = 100-20*2-5*2
+
+
+
+                content box - 
+
+                content area = width+padding*2+border*2
+
+                content-area = 100+20*2+5*2
+            */
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .hexagon{
+            position:relative;
+            width: 100px;
+            height: 110px;
+            background: #111;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="hexagon">
+
+    </div>
+</body>
+</html>
